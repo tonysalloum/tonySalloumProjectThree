@@ -1,67 +1,158 @@
-quizApp.questions = [
-    {
-    question: "What music did you listen to as a teenager?",
-    answers: [
-        { description: "Pink floyd", score: [1, 0, 0, 0] },
-        { description: "Beastie boys", score: [0, 1, 0, 0] },
-        { description: "nirvana", score: [0, 0, 1, 0] },
-        { description: "Nsync", score: [0, 0, 0, 1] },
-    ]
-    },
-    {
-        question: "What cartoon did you watch as a kid?",
-        answers: [
-            { description: "Scooby-Doo and Scrappy-Doo", score: [1, 0, 0, 0] },
-            { description: "Teenage Mutant Ninja Turtles", score: [0, 1, 0, 0] },
-            { description: "Rugrats ", score: [0, 0, 1, 0] },
-            { description: "KIM POSSIBLE", score: [0, 0, 0, 1] },
-        ]
-    },
+// Draft 5
+// References:
+// - https://www.w3schools.com/tags/att_global_data.asp
+const generations = [
+    "your generation is the 70s",
+    "your generation is the 80s",
+    "your generation is the 90s",
+    "your generation is the 2000s",
 ];
 
-// in order to present on the website we will be looking over the questions
-// we are going to be accessing each element in the questions and answers and we will be looping over the answers each time because we have multiple. for each answer object we are going to access the key description and then place that in the DOM. 
-// we are going to place the description in the DOM and we are going to create a field to store the index of the answer in the questions array. 
-// we are going to have a variable called finalScore - and the final score starts with 0,0,0,0 - for every time they select an answer (when they press submit) - we are going to get the index of the answer  - we are then able to grab the score by using dot notation
+const questions = [
+    {
+        style: "music",
+        question: "What music did you listen to as a teenager?",
+        answers: [
+            { description: "Pink Floyd", score: [1, 0, 0, 0], picture: "./assets/Dark_Side_of_the_Moon.png" },
+            { description: "Beastie Boys", score: [0, 1, 0, 0], picture: "./assets/BeastieBoysPaul'sBoutique.jpg" },
+            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/With_the_lights_out_nirvana.jpg" },
+            { description: "Nsync", score: [0, 0, 0, 1], picture: "./assets/220px-Nsync_(album)_alternate.png" },
+        ]
+    },
+    {
+        style: "cartoon",
+        question: "What cartoon did you watch as a kid?",
+        answers: [
+            { description: "Scooby-Doo and Scrappy-Doo", score: [1, 0, 0, 0], picture: "https://placekitten.com/300/200" },
+            { description: "Teenage Mutant Ninja Turtles", score: [0, 1, 0, 0], picture: "https://placekitten.com/300/200" },
+            { description: "Rugrats", score: [0, 0, 1, 0], picture: "https://placekitten.com/300/200" },
+            { description: "Kim Possible", score: [0, 0, 0, 1], picture: "https://placekitten.com/300/200" },
+        ]
+    },
+    {
+        style: "tvShow",
+        question: "What style jeans did you wear as a teen?",
+        answers: [
+            { description: "Bell Bottoms", score: [1, 0, 0, 0], picture: "https://placekitten.com/300/200" },
+            { description: "Teenage Mutant Ninja Turtles", score: [0, 1, 0, 0], picture: "https://placekitten.com/300/200" },
+            { description: "Rugrats", score: [0, 0, 1, 0], picture: "https://placekitten.com/300/200" },
+            { description: "Kim Possible", score: [0, 0, 0, 1], picture: "https://placekitten.com/300/200" },
+        ]
+    }
+];
+
+const App = {
+    debug: true,
+
+    finalScore: [0, 0, 0, 0],
+
+    populate: function () {
+        App.log("Starting populating application");
+
+        // Loop over each quiz in questions array
+        let quizHtml = "";
+        for (let questionId = 0; questionId < questions.length; questionId++) {
+            const quiz = questions[questionId];
+            App.log(`Processing question ${questionId}: ${quiz.question}`);
+
+            quizHtml += `<div id="quiz-${questionId}" class="quiz ${quiz.style}">`;
+            quizHtml += `<p>${quiz.question}</p>`;
+            quizHtml += `<ul>`
+
+            // Loop over each answer option in answers array
+            for (let answerId = 0; answerId < quiz.answers.length; answerId++) {
+                const answerOption = quiz.answers[answerId];
+                App.log(`Processing answer ${answerId}: ${answerOption.description}`);
+
+                quizHtml += `
+                <li>
+                <a href="#" onclick="App.evaluateAnswer(this)" data-question-id=${questionId} data-answer-id="${answerId}">${answerOption.description}</a>
+                <div>
+                <img src="${answerOption.picture}"/>
+                </div>
+                </li>`;
+
+                quizHtml += ``;
+                // reference some kind of image url in the data structure
+
+            }
+            quizHtml += `</ul>`
+            quizHtml += `</div>`;
+        }
+
+        // Presentation logic
+        $("#score").hide();
+        $("#quiz").append(quizHtml);
+        $(".quiz").hide();
+        $("#quiz-0").show();
+
+        App.log("Finishing populating application");
+    },
+
+    evaluateAnswer: function (tag) {
+        App.log("Starting handling answer click");
+
+        const questionId = $(tag).attr("data-question-id");
+        const answerId = $(tag).attr("data-answer-id");
+        App.log(`Retrieved questionId=${questionId} and answerId=${answerId}`);
+
+        const answer = questions[questionId].answers[answerId];
+        App.log(`Selected answer is ${answer.description}`);
+        App.log(`Selected answer score is ${answer.score}`);
+
+        for (let index = 0; index < App.finalScore.length; index++) {
+            App.finalScore[index] = App.finalScore[index] + answer.score[index];
+        }
+        App.log(`Current score is ${App.finalScore}`);
+
+        // Presentation logic
+        const nextQuestionId = parseInt(questionId) + 1;
+        const nextQuestionElementId = `#quiz-${nextQuestionId}`;
+        $(".quiz").hide();
+        if (nextQuestionId >= questions.length) {
+            App.log(`showing the final score`)
+            $("#score").show();
+        } else {
+            App.log(`Presenting next question as ${nextQuestionElementId}`);
+            $(nextQuestionElementId).show();
+        }
 
 
-// Pseudo Code
-// 
-//  App Name | generation, you?
-// 
-//  A landing page with the app heading, "generation, you?" and a
-//  "You're living in the past it's a new generation".
-// 
-//  present an image and A button that allows user to start their generation quiz, which will navigate to the questions.
-// 
-//  Listen to the button click event to hide the div with the image that was visible and present the div with the questions.
-// 
-//  questions with four images that will prompt the user to select their answers - these questions will be rendered using data structures kept in the js file
+        App.log("Finishing handling answer click");
+    },
 
-// quizApp.questions = [
-//     {
-//         question: "What music did you listen to as a teenager?",
-//         answers: [
-//             { description: "Pink floyd", score: [1, 0, 0, 0] },
-//             { description: "Beastie boys", score: [0, 1, 0, 0] },
-//             { description: "nirvana", score: [0, 0, 1, 0] },
-//             { description: "Nsync", score: [0, 0, 0, 1] },
-//         ]
-//     },
-//     {
-//         question: "What cartoon did you watch as a kid?",
-//         answers: [
-//             { description: "Scooby-Doo and Scrappy-Doo", score: [1, 0, 0, 0] },
-//             { description: "Teenage Mutant Ninja Turtles", score: [0, 1, 0, 0] },
-//             { description: "Rugrats ", score: [0, 0, 1, 0] },
-//             { description: "KIM POSSIBLE", score: [0, 0, 0, 1] },
-//         ]
-//     },
-// ];
+    computeScore: function () {
+        App.log("Starting computing score click");
+
+        App.log(`Final score is ${App.finalScore}`);
+        let maxScore = 0;
+        let maxScoreIndex = 0;
+        for (let index = 0; index < App.finalScore.length; index++) {
+            App.log(`User score for [${generations[index]}] generation is ${App.finalScore[index]}`);
+
+            if (App.finalScore[index] > maxScore) {
+                maxScore = App.finalScore[index];
+                maxScoreIndex = index;
+            }
+        }
+        App.log(`User generation is ${generations[maxScoreIndex]}: ${maxScore} score`);
+
+        // Presentation logic
+        $("#score").hide();
+        $("#generation").show();
+        $("#computedGeneration").text(generations[maxScoreIndex]);
 
 
-// Submit the answers to the questions using a button - then we will be listening to a button click event for that button. then we will compute the final score based on the answers that the user selected. 
+        App.log("Finishing computing score click");
+    },
 
-// In order to determine the generation we are going to use an array where each position will represent a score for each generation.
-// 
+    log: function (message) {
+        if (App.debug) {
+            console.log(message);
+        }
+    }
+};
 
+$(function () {
+    App.populate();
+});

@@ -1,9 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>generations</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Concert+One&family=Playfair+Display:wght@900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Generation You?</title>
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="flexContainer">
+        <h1>generation you?</h1>
+        <h2>we will guess the generation you grew up in</h2>
+        <h3>based on your quiz answers</h3>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="wrapper"></div>
+    <section class="sectionOne">
+      <div class="quizContainer">
+        <div id="quiz">
+        </div>
+        <!-- I would put this in here that way your container doesn't collapse -->
+        <div class="generation" id="generation">
+          <p id="computedGeneration"></p>
+        </div>
+        <div class="scoreContainer">
+          <div class="score" id="score">
+            <button onclick="App.computeScore()">Submit</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="sectionTwo">
+
+    </section>
+    <section class="sectionThree">
+      <!-- <div class="generation" id="generation">
+              <p id="computedGeneration"></p>
+            </div> -->
+    </section>
+    </div>
+  </main>
+
+  <!-- <div id="quiz-0">-->
+  <!--   <p>${questionText}</p>-->
+  <!--   <a href="#" onclick="evaluateAnswer(this)" data-question-id=${questionId} data-answer-id="${answerId}">${answerText}</a>-->
+  <!-- </div>-->
+  <!-- <div id="quiz-1">-->
+  <!--   <p>${questionText}</p>-->
+  <!--   <a href="#" onclick="evaluateAnswer(this)" data-question-id=${questionId} data-answer-id="${answerId}">${answerText}</a>-->
+  <!-- </div>-->
+  <footer>
+    <p>genYou</p>
+  </footer>
+  </div>
+  <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+    integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
