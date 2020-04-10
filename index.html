@@ -7,6 +7,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Concert+One&family=Playfair+Display:wght@900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="setup.css" />
   <link rel="stylesheet" href="style.css" />
   <title>Generation You?</title>
 </head>
@@ -23,9 +24,9 @@
   </header>
   <main>
     <div class="wrapper"></div>
-    <section class="sectionOne">
-      <div class="quizContainer">
-        <div id="quiz">
+      <section class="sectionOne">
+        <div class="quizContainer">
+          <div id="quiz">
         </div>
         <!-- I would put this in here that way your container doesn't collapse -->
         <div class="generation" id="generation">
@@ -36,11 +37,14 @@
             <button onclick="App.computeScore()">Submit</button>
           </div>
         </div>
-      </div>
-      </div>
-    </section>
+      </section>
+    </div>  
     <section class="sectionTwo">
-
+      <div>
+        <div class="refreshButton" id="refresh">
+          <button type="button" onClick="reloadThePage()">Refresh!</button>
+        </div>
+      </div>
     </section>
     <section class="sectionThree">
       <!-- <div class="generation" id="generation">
@@ -62,6 +66,8 @@
     <p>genYou</p>
   </footer>
   </div>
+  <!-- sweetalert cdn below -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>  -->
   <script src='https://code.jquery.com/jquery-3.4.0.min.js'
     integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>

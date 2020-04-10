@@ -15,7 +15,7 @@ const questions = [
         answers: [
             { description: "Pink Floyd", score: [1, 0, 0, 0], picture: "./assets/Dark_Side_of_the_Moon.png" },
             { description: "Beastie Boys", score: [0, 1, 0, 0], picture: "./assets/BeastieBoysPaul'sBoutique.jpg" },
-            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/With_the_lights_out_nirvana.jpg" },
+            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/NirvanaNevermindalbumcover.jpg" },
             { description: "Nsync", score: [0, 0, 0, 1], picture: "./assets/220px-Nsync_(album)_alternate.png" },
         ]
     },
@@ -23,22 +23,32 @@ const questions = [
         style: "cartoon",
         question: "What cartoon did you watch as a kid?",
         answers: [
-            { description: "Scooby-Doo and Scrappy-Doo", score: [1, 0, 0, 0], picture: "https://placekitten.com/300/200" },
-            { description: "Teenage Mutant Ninja Turtles", score: [0, 1, 0, 0], picture: "https://placekitten.com/300/200" },
-            { description: "Rugrats", score: [0, 0, 1, 0], picture: "https://placekitten.com/300/200" },
-            { description: "Kim Possible", score: [0, 0, 0, 1], picture: "https://placekitten.com/300/200" },
+            { description: "Scooby-Doo and Scrappy-Doo", score: [1, 0, 0, 0], picture: "./assets/250px-Scooby-gang-1969.jpg" },
+            { description: "Teenage Mutant Ninja Turtles", score: [0, 1, 0, 0], picture: "./assets/Teenage-Mutant-Ninja-Turtles.jpg" },
+            { description: "Rugrats", score: [0, 0, 1, 0], picture: "./assets/Rugrats_logo.png" },
+            { description: "Kim Possible", score: [0, 0, 0, 1], picture: "./assets/200px-Kim_Possible_(promo_art).jpg" },
         ]
     },
     {
         style: "tvShow",
-        question: "What style jeans did you wear as a teen?",
+        question: " Which tv show did you watch as a teen?",
         answers: [
-            { description: "Bell Bottoms", score: [1, 0, 0, 0], picture: "https://placekitten.com/300/200" },
-            { description: "Teenage Mutant Ninja Turtles", score: [0, 1, 0, 0], picture: "https://placekitten.com/300/200" },
-            { description: "Rugrats", score: [0, 0, 1, 0], picture: "https://placekitten.com/300/200" },
-            { description: "Kim Possible", score: [0, 0, 0, 1], picture: "https://placekitten.com/300/200" },
+            { description: "different strokes", score: [1, 0, 0, 0], picture: "./assets/Diffrentstrokes.jpg" },
+            { description: "cheers", score: [0, 1, 0, 0], picture: "./assets/220px-Cheers_season_11.jpg" },
+            { description: "fresh prince of bel-air", score: [0, 0, 1, 0], picture: "./assets/220px-Fresh_Prince_S1_DVD.jpg" },
+            { description: "gilmore girls", score: [0, 0, 0, 1], picture: "./assets/2250px-Gilmore_girls_title_screen.jpg" },
         ]
-    }
+    },
+    {
+        style: "toy",
+        question: "What music did you listen to as a teenager?",
+        answers: [
+            { description: "atari", score: [1, 0, 0, 0], picture: "./assets/Atari-2600-Wood-4Sw-Set.png" },
+            { description: "mr. potato head", score: [0, 1, 0, 0], picture: "./assets/mr-potato-head.jpg" },
+            { description: "tamagotchi", score: [0, 0, 1, 0], picture: "./assets/220px-Tamagotchi_0124_ubt.jpeg" },
+            { description: "scooter", score: [0, 0, 0, 1], picture: "./assets/Razor_old_a.jpg" },
+        ]
+    },
 ];
 
 const App = {
@@ -73,8 +83,6 @@ const App = {
                 </li>`;
 
                 quizHtml += ``;
-                // reference some kind of image url in the data structure
-
             }
             quizHtml += `</ul>`
             quizHtml += `</div>`;
@@ -141,18 +149,27 @@ const App = {
         $("#score").hide();
         $("#generation").show();
         $("#computedGeneration").text(generations[maxScoreIndex]);
+        $("#refresh").show();
 
 
         App.log("Finishing computing score click");
     },
 
+
     log: function (message) {
         if (App.debug) {
-            console.log(message);
+            // console.log(message);
         }
     }
 };
 
+function reloadThePage() {
+    window.location.reload();
+} 
+
 $(function () {
     App.populate();
+    // function reloadThePage() {
+    //     window.location.reload();
+    // } 
 });
