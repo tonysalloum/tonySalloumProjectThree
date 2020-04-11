@@ -2,10 +2,10 @@
 // References:
 // - https://www.w3schools.com/tags/att_global_data.asp
 const generations = [
-    "your generation is the 70s",
-    "your generation is the 80s",
-    "your generation is the 90s",
-    "your generation is the 2000s",
+    "Your generation grew up in the 70s",
+    "Your generation grew up in the 80s",
+    "Your generation grew up in the 90s",
+    "your generation grew up in the 00s",
 ];
 
 const questions = [
@@ -13,40 +13,40 @@ const questions = [
         style: "music",
         question: "What music did you listen to as a teenager?",
         answers: [
-            { description: "Pink Floyd", score: [1, 0, 0, 0], picture: "./assets/Dark_Side_of_the_Moon.png" },
-            { description: "Beastie Boys", score: [0, 1, 0, 0], picture: "./assets/BeastieBoysPaul'sBoutique.jpg" },
-            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/NirvanaNevermindalbumcover.jpg" },
-            { description: "Nsync", score: [0, 0, 0, 1], picture: "./assets/220px-Nsync_(album)_alternate.png" },
+            { description: "Pink Floyd", score: [1, 0, 0, 0], picture: "./assets/pinkFloyd.jpg" },
+            { description: "Beastie Boys", score: [0, 1, 0, 0], picture: "./assets/beastieBoys.jpg" },
+            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/NirvanaNevermindAlbumCover.jpg" },
+            { description: "Nsync", score: [0, 0, 0, 1], picture: "./assets/nSync.png" },
         ]
     },
     {
         style: "cartoon",
         question: "What cartoon did you watch as a kid?",
         answers: [
-            { description: "Scooby-Doo and Scrappy-Doo", score: [1, 0, 0, 0], picture: "./assets/250px-Scooby-gang-1969.jpg" },
-            { description: "Teenage Mutant Ninja Turtles", score: [0, 1, 0, 0], picture: "./assets/Teenage-Mutant-Ninja-Turtles.jpg" },
-            { description: "Rugrats", score: [0, 0, 1, 0], picture: "./assets/Rugrats_logo.png" },
-            { description: "Kim Possible", score: [0, 0, 0, 1], picture: "./assets/200px-Kim_Possible_(promo_art).jpg" },
+            { description: "Scooby-Doo", score: [1, 0, 0, 0], picture: "./assets/scoobyDoo.jpg" },
+            { description: "TMNT", score: [0, 1, 0, 0], picture: "./assets/teenageMutantNinjaTurtles.jpg" },
+            { description: "Rugrats", score: [0, 0, 1, 0], picture: "./assets/rugrats1.jpg" },
+            { description: "Kim Possible", score: [0, 0, 0, 1], picture: "./assets/kimPossible.jpg" },
         ]
     },
     {
         style: "tvShow",
-        question: " Which tv show did you watch as a teen?",
+        question: " What tv show did you watch as a teenager?",
         answers: [
-            { description: "different strokes", score: [1, 0, 0, 0], picture: "./assets/Diffrentstrokes.jpg" },
-            { description: "cheers", score: [0, 1, 0, 0], picture: "./assets/220px-Cheers_season_11.jpg" },
-            { description: "fresh prince of bel-air", score: [0, 0, 1, 0], picture: "./assets/220px-Fresh_Prince_S1_DVD.jpg" },
-            { description: "gilmore girls", score: [0, 0, 0, 1], picture: "./assets/2250px-Gilmore_girls_title_screen.jpg" },
+            { description: "Different Strokes", score: [1, 0, 0, 0], picture: "./assets/differentStrokes.jpg" },
+            { description: "Cheers", score: [0, 1, 0, 0], picture: "./assets/cheers.jpg" },
+            { description: "Fresh Prince", score: [0, 0, 1, 0], picture: "./assets/freshPrince.jpg" },
+            { description: "Gilmore Girls", score: [0, 0, 0, 1], picture: "./assets/gilmoreGirls.jpg" },
         ]
     },
     {
         style: "toy",
-        question: "What music did you listen to as a teenager?",
+        question: "What toy did you play with as a kid?",
         answers: [
-            { description: "atari", score: [1, 0, 0, 0], picture: "./assets/Atari-2600-Wood-4Sw-Set.png" },
-            { description: "mr. potato head", score: [0, 1, 0, 0], picture: "./assets/mr-potato-head.jpg" },
-            { description: "tamagotchi", score: [0, 0, 1, 0], picture: "./assets/220px-Tamagotchi_0124_ubt.jpeg" },
-            { description: "scooter", score: [0, 0, 0, 1], picture: "./assets/Razor_old_a.jpg" },
+            { description: "Atari", score: [1, 0, 0, 0], picture: "./assets/atariConsole.png" },
+            { description: "Mr. Potato Head", score: [0, 1, 0, 0], picture: "./assets/mrPotatoHead.png" },
+            { description: "Tamagotchi", score: [0, 0, 1, 0], picture: "./assets/tamagotchi.png" },
+            { description: "Scooter", score: [0, 0, 0, 1], picture: "./assets/razorScooterOld.png" },
         ]
     },
 ];
@@ -93,6 +93,7 @@ const App = {
         $("#quiz").append(quizHtml);
         $(".quiz").hide();
         $("#quiz-0").show();
+        $("#refresh").hide();
 
         App.log("Finishing populating application");
     },

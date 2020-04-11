@@ -1,10 +1,10 @@
 /* fonts to be used
 
-    font-family: 'Arvo', serif;
 
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Concert One', cursive;
 
-    font-family: 'Concert One', cursive; */
+    font-family: 'Oswald', sans-serif; 
+    font-family: 'Arvo', serif;*/
 
 html {
   font-size: 125%;
@@ -12,7 +12,7 @@ html {
 
 body {
   margin: 0 auto;
-  font-family: "Concert One", cursive;
+  font-family: "Oswald", sans-serif;
   font-size: 1.5rem;
   color: #000;
   min-width: 320px;
@@ -40,33 +40,39 @@ body {
   padding: 30px 30px;
 }
 
+h1,
+h2 {
+  font-family: "Concert One", cursive;
+}
+
 h1 {
-  font-size: 4.5rem;
-  padding: 10px 10px;
+  font-size: 4rem;
+  padding: 20px 10px;
+  color: #000;
 }
 
 h2 {
-  padding: 10px 10px;
-  font-size: 3rem;
+  padding: 20px 10px;
+  font-size: 2.5rem;
   color: #ff5958;
 }
 
-h3 {
+/* h3 {
   padding: 10px 10px;
   font-size: 2rem;
-  color: cadetblue;
-}
+} */
 
 p {
   font-size: 2.5rem;
-  /* padding: 10px 10px; */
+  padding: 20px 20px;
+  color: cadetblue;
 }
 
 header {
-  background-color: peachpuff;
+  background-color: #fff;
   height: 50vh;
-  display: flex;
-  color: white;
+  /* display: flex; */
+  color: #fff;
 }
 
 header h1 {
@@ -83,20 +89,20 @@ main {
 }
 
 .sectionOne {
-  background-color: pink;
+  background-color: #fff;
 }
 
 .sectionTwo {
-  background-color: papayawhip;
+  background-color: #fff;
 }
 
 .quizContainer {
   padding: 20px 10px;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   text-align: center;
   min-height: 30vh;
 }
@@ -115,6 +121,15 @@ main {
   color: #ff5958;
 }
 
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  padding: 20px 20px;
+}
+
 .submit-container {
   padding: 100px;
   text-align: center;
@@ -125,12 +140,12 @@ button {
   -moz-transition: background-color 0.1s ease-out;
   -o-transition: background-color 0.1s ease-out;
   transition: background-color 0.15s ease-out;
-  background-color: #fff;
-  color: #000;
-  padding: 5px 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 8px;
-  font-family: "Concert One", cursive;
+  font-family: "arvo", sans-serif;
 }
 
 button:hover,
@@ -146,8 +161,24 @@ button:focus {
   display: inline-block;
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  color: grey;
+  text-align: center;
+}
+
 footer p {
   font-family: "Arvo", serif;
-  padding: 15px;
+  padding: 15px 0px;
   text-align: center;
+  font-size: 1rem;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
 }
