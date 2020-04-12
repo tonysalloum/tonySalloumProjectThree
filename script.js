@@ -1,8 +1,8 @@
 const generations = [
-    "Your generation grew up in the 70s",
-    "Your generation grew up in the 80s",
-    "Your generation grew up in the 90s",
-    "your generation grew up in the 00s",
+    "Your generation grew up in the 70s!",
+    "Your generation grew up in the 80s!",
+    "Your generation grew up in the 90s!",
+    "your generation grew up in the 00s!",
 ];
 
 const questions = [
@@ -32,19 +32,19 @@ const questions = [
         answers: [
             {
                 description: "Different Strokes", score: [1, 0, 0, 0], picture: "./assets/differentStrokes.jpg", alt: "a dvd cover of the Different Strokes show" },
-            { description: "Cheers", score: [0, 1, 0, 0], picture: "./assets/cheers.jpg" },
-            { description: "Fresh Prince", score: [0, 0, 1, 0], picture: "./assets/freshPrince.jpg" },
-            { description: "Gilmore Girls", score: [0, 0, 0, 1], picture: "./assets/gilmoreGirls.jpg" },
+            { description: "Cheers", score: [0, 1, 0, 0], picture: "./assets/cheers.jpg", alt: "a dvd cover of the cheers show" },
+            { description: "Fresh Prince", score: [0, 0, 1, 0], picture: "./assets/freshPrince.jpg", alt: "a dvd cover of the Fresh Prince of Bel-air show" },
+            { description: "Gilmore Girls", score: [0, 0, 0, 1], picture: "./assets/gilmoreGirls.jpg", alt: "a dvd cover of the Gilmore Girls show" },
         ]
     },
     {
         style: "toy",
         question: "What toy did you play with as a kid?",
         answers: [
-            { description: "Atari", score: [1, 0, 0, 0], picture: "./assets/atariConsole.png" },
-            { description: "Mr. Potato Head", score: [0, 1, 0, 0], picture: "./assets/mrPotatoHead.png" },
-            { description: "Tamagotchi", score: [0, 0, 1, 0], picture: "./assets/tamagotchi.png" },
-            { description: "Scooter", score: [0, 0, 0, 1], picture: "./assets/razorScooterOld.png" },
+            { description: "Atari", score: [1, 0, 0, 0], picture: "./assets/atariConsole.png", alt: "an atari console with one joystick" },
+            { description: "Mr. Potato Head", score: [0, 1, 0, 0], picture: "./assets/mrPotatoHead.png", alt: "a mr. potato head in running motion" },
+            { description: "Tamagotchi", score: [0, 0, 1, 0], picture: "./assets/tamagotchi.png", alt: "a white tamagotci" },
+            { description: "Scooter", score: [0, 0, 0, 1], picture: "./assets/razorScooterOld.png", alt: "a blue and white razor scooter"},
         ]
     },
 ];
@@ -92,7 +92,7 @@ const App = {
         $("#refresh").hide();
 
     },
-
+// evaluating answers clicked by the user
     evaluateAnswer: function (tag) {
         const questionId = $(tag).attr("dataQuestionId");
         const answerId = $(tag).attr("dataAnswerId");
@@ -111,7 +111,7 @@ const App = {
             $(nextQuestionElementId).show();
         }
     },
-
+// computing the score from the evaluated answers
     computeScore: function () {
         let maxScore = 0;
         let maxScoreIndex = 0;

@@ -6,22 +6,6 @@
   li {
     padding: 10px 15px;
   }
-
-  // li a {
-  //   font-size: 1.5rem;
-  // }
-
-  // p {
-  //   font-size: 2.5rem;
-  // }
-
-  // header {
-  //   height: 30vh;
-  // }
-
-  // .quizContainer {
-  //   height: 30vh;
-  // }
 }
 //  media queries - 1230px
 
@@ -29,45 +13,6 @@
   li {
     padding: 10px 10px;
   }
-
-  // li a {
-  //   font-size: 1rem;
-  // }
-
-  // p {
-  //   font-size: 1.75rem;
-  // }
-
-  // header {
-  //   height: 30vh;
-  // }
-
-  // .quizContainer {
-  //   height: 20vh;
-  // }
-}
-
-//  media queries - 1068px
-
-@media (max-width: 1068px) {
-  // li {
-  //   padding: 10px 5px;
-  // }
-  // li a {
-  //   font-size: 1rem;
-  // }
-
-  // p {
-  //   font-size: 2rem;
-  // }
-
-  // header {
-  //   height: 30vh;
-  // }
-
-  // .quizContainer {
-  //   height: 20vh;
-  // }
 }
 
 //  media queries - 930px
@@ -89,21 +34,6 @@
       font-size: 1.3rem;
     }
   }
-  // li a {
-  //   font-size: 1rem;
-  // }
-
-  // p {
-  //   font-size: 2rem;
-  // }
-
-  // header {
-  //   height: 30vh;
-  // }
-
-  // .quizContainer {
-  //   height: 20vh;
-  // }
 }
 
 //  media queries - 856px
@@ -123,31 +53,26 @@
   h1 {
     font-size: 2.5rem;
   }
-  // ul {
-  //   display: block;
-  // }
-}
-
-// homepage media queries - 600px
-
-@media (max-width: 600px) {
 }
 
 // homepage media queries - 560px
 
 @media (max-width: 560px) {
+  h1 {
+    padding: 30px 0 0 0;
+  }
+
   h2 {
     font-size: 1.5rem;
-    padding: 10px 0 0 0;
+    padding: 60px 0 0 0;
+    text-align: center;
   }
-}
 
-// homepage media queries - 440px
+  button {
+    font-size: 2rem;
+  }
 
-@media (max-width: 440px) {
-}
-
-// homepage media queries - 340px
-
-@media (max-width: 340px) {
+  .generation p {
+    font-size: 2rem;
+  }
 }
