@@ -359,6 +359,12 @@ img {
   max-width: 100%;
 }
 
+p {
+  font-size: 2.5rem;
+  padding: 0;
+  color: cadetblue;
+}
+
 main {
   margin: 0 auto;
 }
@@ -415,20 +421,16 @@ h2 {
   color: navy;
 }
 
-p {
-  font-size: 2.5rem;
-  padding: 0;
-  color: cadetblue;
-}
-
 header {
   background-color: #fff;
   height: 40vh;
-  color: #fff;
   background: grey 50% no-repeat;
   background-size: cover;
   display: block;
   padding: 20px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 header h1 {
@@ -532,17 +534,40 @@ button:focus {
 }
 
 @media (max-width: 930px) {
-  .indexPage li a {
-    font-size: 1rem;
+  h1 {
+    font-size: 2.5rem;
   }
-  .indexPage p {
-    font-size: 2rem;
+  h2,
+  p {
+    font-size: 1.5rem;
   }
-  .indexPage header {
-    height: 30vh;
+  ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .indexPage .quizContainer {
-    height: 20vh;
+  .quizContainer a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 780px) {
+  header {
+    padding: 5px;
+  }
+  .flexContainer {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  h2 {
+    font-size: 1.5rem;
+    padding: 10px 0 0 0;
   }
 }
 

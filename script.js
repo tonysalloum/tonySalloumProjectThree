@@ -12,7 +12,7 @@ const questions = [
         answers: [
             { description: "Pink Floyd", score: [1, 0, 0, 0], picture: "./assets/pinkFloyd.jpg", alt: "Pink Floyd album cover the Piper at the Gates of Dawn" },
             { description: "Beastie Boys", score: [0, 1, 0, 0], picture: "./assets/beastieBoys.jpg", alt: "Beastie Boys album cover check your head" },
-            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/NirvanaNevermindAlbumCover.jpg", alt: "Nirvana album cover Nevermind"  },
+            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/nirvanaNevermindAlbumCover.jpg", alt: "Nirvana album cover Nevermind"  },
             { description: "Nsync", score: [0, 0, 0, 1], picture: "./assets/nSync.png", alt: "NSync album cover of their self titled album" },
         ]
     },
