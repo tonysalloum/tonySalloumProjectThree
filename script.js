@@ -12,7 +12,7 @@ const questions = [
         answers: [
             { description: "Pink Floyd", score: [1, 0, 0, 0], picture: "./assets/pinkFloyd.jpg", alt: "Pink Floyd album cover the Piper at the Gates of Dawn" },
             { description: "Beastie Boys", score: [0, 1, 0, 0], picture: "./assets/beastieBoys.jpg", alt: "Beastie Boys album cover check your head" },
-            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/nirvanaNevermindAlbumCover.jpg", alt: "Nirvana album cover Nevermind"  },
+            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/NirvanaNevermindAlbumCover.jpg", alt: "Nirvana album cover Nevermind"  },
             { description: "Nsync", score: [0, 0, 0, 1], picture: "./assets/nSync.png", alt: "NSync album cover of their self titled album" },
         ]
     },
@@ -21,16 +21,17 @@ const questions = [
         question: "What cartoon did you watch as a kid?",
         answers: [
             { description: "Scooby-Doo", score: [1, 0, 0, 0], picture: "./assets/scoobyDoo.jpg", alt: "a cartoon cover of The Scooby Doo Show" },
-            { description: "TMNT", score: [0, 1, 0, 0], picture: "./assets/teenageMutantNinjaTurtles.jpg" },
-            { description: "Rugrats", score: [0, 0, 1, 0], picture: "./assets/rugrats1.jpg" },
-            { description: "Kim Possible", score: [0, 0, 0, 1], picture: "./assets/kimPossible.jpg" },
+            { description: "TMNT", score: [0, 1, 0, 0], picture: "./assets/teenageMutantNinjaTurtles.jpg", alt: "a cartoon cover of the Teenage Mutant Ninja Turtles" },
+            { description: "Rugrats", score: [0, 0, 1, 0], picture: "./assets/rugrats1.jpg", alt: "a cartoon cover of the Rugrats show" },
+            { description: "Kim Possible", score: [0, 0, 0, 1], picture: "./assets/kimPossible.jpg", alt: "a cartoon cover of Kim Possible show" },
         ]
     },
     {
         style: "tvShow",
         question: " What tv show did you watch as a teenager?",
         answers: [
-            { description: "Different Strokes", score: [1, 0, 0, 0], picture: "./assets/differentStrokes.jpg" },
+            {
+                description: "Different Strokes", score: [1, 0, 0, 0], picture: "./assets/differentStrokes.jpg", alt: "a dvd cover of the Different Strokes show" },
             { description: "Cheers", score: [0, 1, 0, 0], picture: "./assets/cheers.jpg" },
             { description: "Fresh Prince", score: [0, 0, 1, 0], picture: "./assets/freshPrince.jpg" },
             { description: "Gilmore Girls", score: [0, 0, 0, 1], picture: "./assets/gilmoreGirls.jpg" },
