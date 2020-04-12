@@ -55,7 +55,7 @@
   }
 }
 
-// homepage media queries - 560px
+//  media queries - 560px
 
 @media (max-width: 560px) {
   h1 {
@@ -70,6 +70,32 @@
 
   button {
     font-size: 2rem;
+    background-color: palevioletred;
+  }
+
+  .generation p {
+    font-size: 2rem;
+  }
+}
+
+// media queries - 380px
+@media (max-width: 380px) {
+  header {
+    height: 55vh;
+  }
+  h1 {
+    padding: 30px 0 0 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    padding: 60px 0 0 0;
+    text-align: center;
+  }
+
+  button {
+    font-size: 2rem;
+    background-color: palevioletred;
   }
 
   .generation p {
