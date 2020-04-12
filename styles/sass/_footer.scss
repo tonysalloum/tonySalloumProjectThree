@@ -1,0 +1,21 @@
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  color: grey;
+  text-align: center;
+}
+
+footer p {
+  font-family: "Concert One", sans-serif;
+  padding: 15px 0px;
+  text-align: center;
+  font-size: 0.89rem;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
+}

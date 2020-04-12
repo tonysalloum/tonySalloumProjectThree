@@ -1,6 +1,3 @@
-// Draft 5
-// References:
-// - https://www.w3schools.com/tags/att_global_data.asp
 const generations = [
     "Your generation grew up in the 70s",
     "Your generation grew up in the 80s",
@@ -52,18 +49,16 @@ const questions = [
 ];
 
 const App = {
-    debug: true,
 
     finalScore: [0, 0, 0, 0],
 
     populate: function () {
-        App.log("Starting populating application");
+    
 
         // Loop over each quiz in questions array
         let quizHtml = "";
         for (let questionId = 0; questionId < questions.length; questionId++) {
             const quiz = questions[questionId];
-            App.log(`Processing question ${questionId}: ${quiz.question}`);
 
             quizHtml += `<div id="quiz-${questionId}" class="quiz ${quiz.style}">`;
             quizHtml += `<p>${quiz.question}</p>`;
@@ -72,12 +67,11 @@ const App = {
             // Loop over each answer option in answers array
             for (let answerId = 0; answerId < quiz.answers.length; answerId++) {
                 const answerOption = quiz.answers[answerId];
-                App.log(`Processing answer ${answerId}: ${answerOption.description}`);
 
                 quizHtml += `
                 <li>
-                <a href="#" onclick="App.evaluateAnswer(this)" data-question-id=${questionId} data-answer-id="${answerId}">${answerOption.description}</a>
-                <div>
+                <a class="button animated shake" href="#" onclick="App.evaluateAnswer(this)" dataQuestionId=${questionId} dataAnswerId="${answerId}">${answerOption.description}</a>
+                <div class="imageContainer">
                 <img src="${answerOption.picture}"/>
                 </div>
                 </li>`;
@@ -95,71 +89,47 @@ const App = {
         $("#quiz-0").show();
         $("#refresh").hide();
 
-        App.log("Finishing populating application");
     },
 
     evaluateAnswer: function (tag) {
-        App.log("Starting handling answer click");
-
-        const questionId = $(tag).attr("data-question-id");
-        const answerId = $(tag).attr("data-answer-id");
-        App.log(`Retrieved questionId=${questionId} and answerId=${answerId}`);
-
-        const answer = questions[questionId].answers[answerId];
-        App.log(`Selected answer is ${answer.description}`);
-        App.log(`Selected answer score is ${answer.score}`);
-
+        const questionId = $(tag).attr("dataQuestionId");
+        const answerId = $(tag).attr("dataAnswerId");
+        const answer = questions[questionId].answers[answerId];       
         for (let index = 0; index < App.finalScore.length; index++) {
             App.finalScore[index] = App.finalScore[index] + answer.score[index];
         }
-        App.log(`Current score is ${App.finalScore}`);
 
         // Presentation logic
         const nextQuestionId = parseInt(questionId) + 1;
         const nextQuestionElementId = `#quiz-${nextQuestionId}`;
         $(".quiz").hide();
         if (nextQuestionId >= questions.length) {
-            App.log(`showing the final score`)
             $("#score").show();
         } else {
-            App.log(`Presenting next question as ${nextQuestionElementId}`);
             $(nextQuestionElementId).show();
         }
-
-
-        App.log("Finishing handling answer click");
     },
 
     computeScore: function () {
-        App.log("Starting computing score click");
-
-        App.log(`Final score is ${App.finalScore}`);
         let maxScore = 0;
         let maxScoreIndex = 0;
         for (let index = 0; index < App.finalScore.length; index++) {
-            App.log(`User score for [${generations[index]}] generation is ${App.finalScore[index]}`);
-
             if (App.finalScore[index] > maxScore) {
                 maxScore = App.finalScore[index];
                 maxScoreIndex = index;
             }
         }
-        App.log(`User generation is ${generations[maxScoreIndex]}: ${maxScore} score`);
 
         // Presentation logic
         $("#score").hide();
         $("#generation").show();
         $("#computedGeneration").text(generations[maxScoreIndex]);
         $("#refresh").show();
-
-
-        App.log("Finishing computing score click");
     },
 
 
     log: function (message) {
         if (App.debug) {
-            // console.log(message);
         }
     }
 };
@@ -170,7 +140,4 @@ function reloadThePage() {
 
 $(function () {
     App.populate();
-    // function reloadThePage() {
-    //     window.location.reload();
-    // } 
 });

@@ -4,21 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-  href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Concert+One&family=Oswald:wght@500&display=swap"
-  rel="stylesheet">
-  <link rel="stylesheet" href="setup.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/sass/style.css" />
   <title>Generation You?</title>
 </head>
 
-<body>
+<body class="indexPage">
   <header>
     <div class="wrapper">
       <div class="flexContainer">
         <h1>Generation You?</h1>
-        <h2>We will guess your generation</h2>
-        <p>Based on your quiz answers</p>
+        <h2>We will guess what</h2>
+        <h2>decade you grew up in</h2>
       </div>
     </div>
   </header>
@@ -39,23 +36,19 @@
       </section>
       <section class="sectionTwo">
         <div class="refreshButton" id="refresh">
-          <button type="button" onClick="reloadThePage()">Run it back!</button>
+          <button type="button" onClick="reloadThePage()">Refresh!</button>
         </div>
       </section>
     </div>
   </main>
   <footer>
     <div>
-      <p>genYou</p>
-      <p>a tony salloum production 2020&copy</p>
+      <p>ts  2020&copy</p>
     </div>
   </footer>
-  <!-- sweetalert cdn below -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>  -->
   <script src='https://code.jquery.com/jquery-3.4.0.min.js'
     integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
   <script src="./script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,28 @@
+/* body styles */
+
+html {
+  font-size: 125%;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Concert One", sans-serif;
+  font-size: 1.5rem;
+  color: #000;
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.sectionOne,
+.sectionTwo {
+  background-color: #fff;
+}

@@ -1,0 +1,35 @@
+/* quiz section */
+.quizContainer {
+  padding: 20px 10px;
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+  min-height: 30vh;
+}
+.quizContainer a {
+  -webkit-transition: color 0.15s ease-out;
+  -moz-transition: color 0.15s ease-out;
+  -o-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out;
+  display: block;
+  padding: 20px 40px;
+  text-decoration: none;
+  color: #000;
+}
+
+.quizContainer a:hover,
+.quizContainer a:focus {
+  color: palevioletred;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  padding: 10px 20px;
+}

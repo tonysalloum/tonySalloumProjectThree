@@ -1,0 +1,37 @@
+/* score section */
+.scoreContainer,
+.refreshButton {
+  /* padding: 0px; */
+  text-align: center;
+}
+
+button {
+  -webkit-transition: background-color 0.15s ease-out;
+  -moz-transition: background-color 0.1s ease-out;
+  -o-transition: background-color 0.1s ease-out;
+  transition: background-color 0.15s ease-out;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Concert One", sans-serif;
+}
+
+button:hover,
+button:focus {
+  background-color: palevioletred;
+}
+
+.scoreContainer,
+.generation {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.generation p {
+  text-align: center;
+  color: palevioletred;
+  font-size: 3.5rem;
+}

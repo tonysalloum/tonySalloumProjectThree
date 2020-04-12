@@ -1,0 +1,56 @@
+/* header styles */
+
+.wrapper {
+  /* margin: 0 auto;
+  width: 1350px;
+  max-width: 95%; */
+  max-width: 1250px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px;
+}
+
+h1,
+h2 {
+  font-family: "Concert One", cursive;
+}
+
+h1 {
+  font-size: 4rem;
+  padding: 10px 10px;
+  color: floralwhite;
+}
+
+h2 {
+  padding: 20px 10px 10px 10px;
+  font-size: 2.5rem;
+  color: navy;
+}
+
+p {
+  font-size: 2.5rem;
+  padding: 0;
+  color: cadetblue;
+}
+
+header {
+  background-color: #fff;
+  height: 40vh;
+  color: #fff;
+  background: grey 50% no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+header h1 {
+  margin: 0 auto;
+  text-transform: uppercase;
+}
