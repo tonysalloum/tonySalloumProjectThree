@@ -394,7 +394,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 30px;
 }
 
 h1,
@@ -406,10 +405,12 @@ h1 {
   font-size: 4rem;
   padding: 10px 10px;
   color: floralwhite;
+  text-align: center;
 }
 
 h2 {
-  padding: 20px 10px 10px 10px;
+  padding-top: 20px;
+  line-height: 2rem;
   font-size: 2.5rem;
   color: navy;
 }
@@ -427,6 +428,7 @@ header {
   background: grey 50% no-repeat;
   background-size: cover;
   display: block;
+  padding: 20px;
 }
 
 header h1 {
@@ -437,11 +439,6 @@ header h1 {
 /* quiz section */
 .quizContainer {
   padding: 20px 10px;
-  /* display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   text-align: center;
   min-height: 30vh;
 }
@@ -450,9 +447,13 @@ header h1 {
   -webkit-transition: color 0.15s ease-out;
   transition: color 0.15s ease-out;
   display: block;
-  padding: 20px 40px;
+  padding-top: 20px;
   text-decoration: none;
   color: #000;
+}
+
+.quizContainer a .imageContainer {
+  padding-top: 15px;
 }
 
 .quizContainer a:hover,
@@ -511,6 +512,38 @@ button:focus {
   text-align: center;
   color: palevioletred;
   font-size: 3.5rem;
+}
+
+@media (max-width: 1274px) {
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  li {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 1230px) {
+  li {
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 930px) {
+  .indexPage li a {
+    font-size: 1rem;
+  }
+  .indexPage p {
+    font-size: 2rem;
+  }
+  .indexPage header {
+    height: 30vh;
+  }
+  .indexPage .quizContainer {
+    height: 20vh;
+  }
 }
 
 footer {

@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 30px;
+  // padding: 30px 30px;
 }
 
 h1,
@@ -27,10 +27,12 @@ h1 {
   font-size: 4rem;
   padding: 10px 10px;
   color: floralwhite;
+  text-align: center;
 }
 
 h2 {
-  padding: 20px 10px 10px 10px;
+  padding-top: 20px;
+  line-height: 2rem;
   font-size: 2.5rem;
   color: navy;
 }
@@ -48,6 +50,7 @@ header {
   background: grey 50% no-repeat;
   background-size: cover;
   display: block;
+  padding: 20px;
 }
 
 header h1 {

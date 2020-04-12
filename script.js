@@ -10,17 +10,17 @@ const questions = [
         style: "music",
         question: "What music did you listen to as a teenager?",
         answers: [
-            { description: "Pink Floyd", score: [1, 0, 0, 0], picture: "./assets/pinkFloyd.jpg" },
-            { description: "Beastie Boys", score: [0, 1, 0, 0], picture: "./assets/beastieBoys.jpg" },
-            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/NirvanaNevermindAlbumCover.jpg" },
-            { description: "Nsync", score: [0, 0, 0, 1], picture: "./assets/nSync.png" },
+            { description: "Pink Floyd", score: [1, 0, 0, 0], picture: "./assets/pinkFloyd.jpg", alt: "Pink Floyd album cover the Piper at the Gates of Dawn" },
+            { description: "Beastie Boys", score: [0, 1, 0, 0], picture: "./assets/beastieBoys.jpg", alt: "Beastie Boys album cover check your head" },
+            { description: "Nirvana", score: [0, 0, 1, 0], picture: "./assets/NirvanaNevermindAlbumCover.jpg", alt: "Nirvana album cover Nevermind"  },
+            { description: "Nsync", score: [0, 0, 0, 1], picture: "./assets/nSync.png", alt: "NSync album cover of their self titled album" },
         ]
     },
     {
         style: "cartoon",
         question: "What cartoon did you watch as a kid?",
         answers: [
-            { description: "Scooby-Doo", score: [1, 0, 0, 0], picture: "./assets/scoobyDoo.jpg" },
+            { description: "Scooby-Doo", score: [1, 0, 0, 0], picture: "./assets/scoobyDoo.jpg", alt: "a cartoon cover of The Scooby Doo Show" },
             { description: "TMNT", score: [0, 1, 0, 0], picture: "./assets/teenageMutantNinjaTurtles.jpg" },
             { description: "Rugrats", score: [0, 0, 1, 0], picture: "./assets/rugrats1.jpg" },
             { description: "Kim Possible", score: [0, 0, 0, 1], picture: "./assets/kimPossible.jpg" },
@@ -53,7 +53,7 @@ const App = {
     finalScore: [0, 0, 0, 0],
 
     populate: function () {
-    
+
 
         // Loop over each quiz in questions array
         let quizHtml = "";
@@ -70,10 +70,11 @@ const App = {
 
                 quizHtml += `
                 <li>
-                <a class="button animated shake" href="#" onclick="App.evaluateAnswer(this)" dataQuestionId=${questionId} dataAnswerId="${answerId}">${answerOption.description}</a>
+                <a href="#" onclick="App.evaluateAnswer(this)" dataQuestionId=${questionId} dataAnswerId="${answerId}">${answerOption.description}
                 <div class="imageContainer">
                 <img src="${answerOption.picture}"/>
                 </div>
+                </a>
                 </li>`;
 
                 quizHtml += ``;
@@ -94,7 +95,7 @@ const App = {
     evaluateAnswer: function (tag) {
         const questionId = $(tag).attr("dataQuestionId");
         const answerId = $(tag).attr("dataAnswerId");
-        const answer = questions[questionId].answers[answerId];       
+        const answer = questions[questionId].answers[answerId];
         for (let index = 0; index < App.finalScore.length; index++) {
             App.finalScore[index] = App.finalScore[index] + answer.score[index];
         }
@@ -136,8 +137,9 @@ const App = {
 
 function reloadThePage() {
     window.location.reload();
-} 
+}
 
 $(function () {
     App.populate();
 });
+

@@ -1,11 +1,6 @@
 /* quiz section */
 .quizContainer {
   padding: 20px 10px;
-  /* display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   text-align: center;
   min-height: 30vh;
 }
@@ -15,9 +10,12 @@
   -o-transition: color 0.15s ease-out;
   transition: color 0.15s ease-out;
   display: block;
-  padding: 20px 40px;
+  padding-top: 20px;
   text-decoration: none;
   color: #000;
+  .imageContainer {
+    padding-top: 15px;
+  }
 }
 
 .quizContainer a:hover,

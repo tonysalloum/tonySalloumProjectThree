@@ -1,73 +1,149 @@
-// homepage media queries - 1230px
-@media (max-width: 1256px) {
-  .indexPage {
+//  media queries - 1274px
+@media (max-width: 1274px) {
+  ul {
+    display: flex;
   }
+  li {
+    padding: 10px 15px;
+  }
+
+  // li a {
+  //   font-size: 1.5rem;
+  // }
+
+  // p {
+  //   font-size: 2.5rem;
+  // }
+
+  // header {
+  //   height: 30vh;
+  // }
+
+  // .quizContainer {
+  //   height: 30vh;
+  // }
 }
+//  media queries - 1230px
 
 @media (max-width: 1230px) {
-  .indexPage {
+  li {
+    padding: 10px 10px;
   }
+
+  // li a {
+  //   font-size: 1rem;
+  // }
+
+  // p {
+  //   font-size: 1.75rem;
+  // }
+
+  // header {
+  //   height: 30vh;
+  // }
+
+  // .quizContainer {
+  //   height: 20vh;
+  // }
 }
 
-// homepage media queries - 1068px
+//  media queries - 1068px
 
 @media (max-width: 1068px) {
-  .indexPage {
-  }
+  // li {
+  //   padding: 10px 5px;
+  // }
+  // li a {
+  //   font-size: 1rem;
+  // }
+
+  // p {
+  //   font-size: 2rem;
+  // }
+
+  // header {
+  //   height: 30vh;
+  // }
+
+  // .quizContainer {
+  //   height: 20vh;
+  // }
 }
 
-// homepage media queries - 930px
+//  media queries - 930px
 
 @media (max-width: 930px) {
-  .indexPage {
+  h1 {
+    font-size: 2.5rem;
   }
+  h2,
+  p {
+    font-size: 1.5rem;
+  }
+  .quizContainer {
+    a {
+      font-size: 1.3rem;
+    }
+  }
+  // li a {
+  //   font-size: 1rem;
+  // }
+
+  // p {
+  //   font-size: 2rem;
+  // }
+
+  // header {
+  //   height: 30vh;
+  // }
+
+  // .quizContainer {
+  //   height: 20vh;
+  // }
 }
 
-// homepage media queries - 856px
+//  media queries - 856px
 
 @media (max-width: 856px) {
-  .indexPage {
-  }
 }
 
-// homepage media queries - 780px
+//  media queries - 780px
 
 @media (max-width: 780px) {
-  .indexPage {
+  header {
+    padding: 5px;
   }
-}
-
-// homepage media queries - 780px
-
-@media (max-width: 780px) {
-  .indexPage {
+  .flexContainer {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  ul {
+    display: block;
   }
 }
 
 // homepage media queries - 600px
 
 @media (max-width: 600px) {
-  .indexPage {
-  }
 }
 
 // homepage media queries - 560px
 
 @media (max-width: 560px) {
-  .indexPage {
+  h2 {
+    font-size: 1.5rem;
+    padding: 10px 0 0 0;
   }
 }
 
 // homepage media queries - 440px
 
 @media (max-width: 440px) {
-  .indexPage {
-  }
 }
 
 // homepage media queries - 340px
 
 @media (max-width: 340px) {
-  .indexPage {
-  }
 }
