@@ -14,19 +14,16 @@
   align-items: center;
 }
 
-h1,
-h2 {
-  font-family: "Oswald", sans-serif;
-  color: floralwhite;
-}
-
 h1 {
+  font-family: "Bungee Shade", cursive;
+  color: floralwhite;
   font-size: 4rem;
-  padding: 10px 10px;
+  padding: 30px 10px;
   text-align: center;
 }
 
 h2 {
+  color: floralwhite;
   padding-top: 30px;
   line-height: 3rem;
   font-size: 3rem;
@@ -35,8 +32,8 @@ h2 {
 
 header {
   background-color: #fff;
-  height: 40vh;
-  background: url(../../assets/armin-hosseini-_JLDuhrvU3Q-unsplash.jpg) 50%
+  height: 50vh;
+  background: url(../../assets/sean-sinclair-k0JNJRbrJAs-unsplash.jpg) 50%
     no-repeat;
   display: block;
   background-attachment: fixed;
