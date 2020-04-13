@@ -578,9 +578,12 @@ button:focus {
   .imageContainer {
     padding: 20px 0 25px 0;
   }
-  generation p {
+  .generation p {
     padding-bottom: 10px;
     font-size: 1.5rem;
+  }
+  .sectionTwo {
+    height: 30vh;
   }
 }
 
@@ -602,9 +605,12 @@ button:focus {
     background-color: palevioletred;
     color: #000;
   }
-  generation p {
+  .generation p {
     padding-bottom: 10px;
     font-size: 1.5rem;
+  }
+  .sectionTwo {
+    height: 30vh;
   }
 }
 
@@ -632,6 +638,9 @@ button:focus {
   .generation p {
     padding-bottom: 10px;
     font-size: 1.5rem;
+  }
+  .sectionTwo {
+    height: 30vh;
   }
 }
 
