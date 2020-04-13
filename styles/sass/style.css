@@ -685,12 +685,4 @@ footer p {
   text-align: center;
   font-size: 0.89rem;
 }
-
-footer div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
 /*# sourceMappingURL=style.css.map */
