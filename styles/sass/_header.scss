@@ -31,17 +31,17 @@ h1 {
 }
 
 h2 {
-  padding-top: 20px;
-  line-height: 2rem;
-  font-size: 2.5rem;
-  color: navy;
+  padding-top: 30px;
+  line-height: 3rem;
+  font-size: 3rem;
+  color: rgba(0, 0, 128, 0.529);
 }
 
 header {
   background-color: #fff;
   height: 40vh;
-  background: grey 50% no-repeat;
-  background-size: cover;
+  background: url(../../assets/armin-hosseini-_JLDuhrvU3Q-unsplash.jpg) 50%
+    no-repeat;
   display: block;
   padding: 20px;
   background-attachment: fixed;
@@ -52,4 +52,5 @@ header {
 header h1 {
   margin: 0 auto;
   text-transform: uppercase;
+  border-bottom: 2px solid floralwhite;
 }
