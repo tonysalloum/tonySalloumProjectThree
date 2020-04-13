@@ -402,12 +402,12 @@ main {
 h1,
 h2 {
   font-family: "Oswald", sans-serif;
+  color: floralwhite;
 }
 
 h1 {
   font-size: 4rem;
   padding: 10px 10px;
-  color: floralwhite;
   text-align: center;
 }
 
@@ -415,7 +415,6 @@ h2 {
   padding-top: 30px;
   line-height: 3rem;
   font-size: 3rem;
-  color: rgba(16, 38, 125, 0.9);
   text-align: center;
 }
 
@@ -637,7 +636,7 @@ button:focus {
   }
   .generation p {
     padding-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .sectionTwo {
     height: 30vh;
@@ -670,8 +669,7 @@ button:focus {
   }
   .generation p {
     padding-bottom: 10px;
-    font-size: 1.5rem;
-    border: 2px solid #000;
+    font-size: 1.7rem;
   }
   .imageContainer {
     padding: 20px 0 25px 0;
