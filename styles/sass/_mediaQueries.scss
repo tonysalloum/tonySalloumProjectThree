@@ -7,6 +7,7 @@
     padding: 10px 15px;
   }
 }
+
 //  media queries - 1230px
 
 @media (max-width: 1230px) {
@@ -35,19 +36,19 @@
       font-size: 1.3rem;
     }
   }
-}
 
-//  media queries - 856px
-
-@media (max-width: 856px) {
+  button {
+    font-size: 1.8rem;
+    background-color: palevioletred;
+    color: #000;
+  }
 }
 
 //  media queries - 780px
 
 @media (max-width: 780px) {
   header {
-    height: 40vh;
-    // padding: 20px 0 0 0;
+    height: 50vh;
   }
   .flexContainer {
     padding: 10px;
@@ -61,9 +62,18 @@
     text-align: center;
   }
   button {
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-color: palevioletred;
     color: #000;
+  }
+
+  .imageContainer {
+    padding: 20px 0 25px 0;
+  }
+
+  generation p {
+    padding-bottom: 10px;
+    font-size: 1.5rem;
   }
 }
 
@@ -85,13 +95,14 @@
   }
 
   button {
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-color: palevioletred;
     color: #000;
   }
 
-  .generation p {
-    font-size: 2rem;
+  generation p {
+    padding-bottom: 10px;
+    font-size: 1.5rem;
   }
 }
 
@@ -112,7 +123,7 @@
   }
 
   button {
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-color: palevioletred;
     padding: 10px 10px;
   }
@@ -124,5 +135,44 @@
   .generation p {
     padding-bottom: 10px;
     font-size: 1.5rem;
+  }
+}
+
+// media queries - 320px
+@media (max-width: 320px) {
+  header {
+    height: 50vh;
+  }
+  h1 {
+    font-size: 1.5rem;
+    padding: 30px 0 0 0;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    padding: 40px 0 10px 0;
+    text-align: center;
+  }
+  .quiz p {
+    font-size: 1.3rem;
+  }
+  button {
+    font-size: 1.5rem;
+    background-color: palevioletred;
+    padding: 10px 5px;
+  }
+
+  .quizContainer {
+    height: 30vh;
+  }
+
+  .generation p {
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    border: 2px solid #000;
+  }
+
+  .imageContainer {
+    padding: 20px 0 25px 0;
   }
 }
